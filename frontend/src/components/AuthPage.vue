@@ -16,12 +16,10 @@ const toggleMode = () => {
   <div class="min-h-screen flex items-center justify-center bg-blue-400">
     <div class="w-full max-w-md bg-white p-6 rounded-lg shadow-md">
 
-      <!-- Title -->
       <div class="flex items-center justify-center mb-6">
         <h1 class="text-xl font-semibold">{{ title }}</h1>
       </div>
 
-      <!-- Inputs -->
       <div class="space-y-4">
         <input
           v-model="email"
@@ -38,7 +36,6 @@ const toggleMode = () => {
         />
       </div>
 
-      <!-- Submit -->
       <div class="pt-6">
         <button
           type="button"
@@ -50,7 +47,7 @@ const toggleMode = () => {
 
       <!-- Toggle -->
       <div class="pt-2 flex items-center justify-center space-x-1 text-sm">
-        <span>New to TaskHive?</span>
+        <span>{{ isLogin ? "New to TaskHive?" : "Already have an Account?" }}</span>
         <button
           type="button"
           @click="toggleMode"
